@@ -1,0 +1,217 @@
+<!doctype html>
+<html>
+<head lang="en">
+    {% block head %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A remake of the Joker Lane Raceway site">
+
+    <title>{%block title %}{{ SITENAME }}{% endblock title %}</title>
+
+
+    <!--<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">-->
+    <link rel="stylesheet" href="theme/css/pure/pure-min.css">
+    <link rel="stylesheet" href="theme/css/pure/grids-min.css">
+    <link rel="stylesheet" href="theme/css/pure/grids-responsive-min.css">
+    <link rel="stylesheet" href="theme/css/style.css">
+    <link rel="stylesheet" href="theme/css/lightbox/lightbox.css">
+
+    <script src="theme/js/jquery-1.11.0.min.js"></script>
+    <script src="theme/js/lightbox.min.js"></script>
+
+    <link rel="icon" type="image/png" href="theme/img/favicon.png">
+
+    {% endblock head %}
+
+</head>
+<body>
+<div id="content-container" >
+    <div id="logo-and-nav" class="pure-g">
+        <div class="pure-u-1 pure-u-sm-1 pure-u-md-2-5 ">
+            <a href="index.html"><img src="theme/img/logo.png" alt="Joker Lane Raceway" class="pure-img"></a>
+        </div>
+        <div class="pure-u-1 pure-u-sm-1 pure-u-md-3-5">
+            <div id="push-down">
+                <div id="social-media">
+                    {% include 'socialMedia.html' %}
+                </div>
+                <div class="clear"></div>
+                <div id="nav" class="pure-menu pure-menu-horizontal pure-menu-scrollable">
+
+                    <ul class="pure-menu-list">
+                        <li class="pure-menu-item "><a href="calendar.html" class="navigate pure-menu-link">Calendar</a></li>
+                        <li class="pure-menu-separator"></li>
+                        <li class="pure-menu-item"><a href="gallery.html" class="navigate pure-menu-link">Gallery</a></li>
+                        <li class="pure-menu-separator"></li>
+                        <li class="pure-menu-item"><a href="bookings.html" class="navigate pure-menu-link">Bookings</a></li>
+                        <li class="pure-menu-separator"></li>
+                        <li class="pure-menu-item"><a href="hours.html" class="navigate pure-menu-link">Hours</a></li>
+                        <li class="pure-menu-separator"></li>
+                        <li class="pure-menu-item"><a href="contact.html" class="navigate pure-menu-link">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div id="nav2" class="pure-menu pure-menu-horizontal pure-menu-scrollable">
+        <ul class="pure-menu-list centre">
+            <li class="pure-menu-item "><a href="track-info.html" class="navigate pure-menu-link">Track information</a></li>
+            <li class="pure-menu-separator"></li>
+            <li class="pure-menu-item"><a href="events.html" class="navigate pure-menu-link">Events</a></li>
+            <li class="pure-menu-separator"></li>
+            <li class="pure-menu-item"><a href="pro-shop.html" class="navigate pure-menu-link">Pro Shop</a></li>
+            <li class="pure-menu-separator"></li>
+            <li class="pure-menu-item"><a href="pro-team.html" class="navigate pure-menu-link">AKA Racing Team</a></li>
+        </ul>
+    </div>
+
+    <div id="main-content" class="black-background">
+        <div class="box">
+            <div class="body-header pure-g">
+                <h1 class="remove-spacing">{% block pageTitle %}{% endblock %}</h1>
+            </div>
+            <hr>
+            <div class="remove-spacing pure-g">
+                {% block content %}
+                {% endblock %}
+               <!-- <div id="upcoming-race" class="pure-u-1 pure-u-sm-3-5">
+                    <div class="box sidebar-right">
+                        <h2 class="remove-spacing">Upcoming Race Events</h2>
+                        <hr class="dashed">
+                        <div class="pure-g">
+                            <div class="pure-u-1-3">
+                                <a href="#"><img src="img/rcgears-small.png" alt="club picture" class="pure-img"></a>
+                            </div>
+                            <div class="pure-u-2-3">
+                                <h3 class="remove-spacing">Race Title</h3>
+                                <span class="event-text remove-spacing">July 29-30, 2015 - </span>
+                                <span class="event-text remove-spacing">Calgary, AB, CA</span>
+                                <p>
+                                    Lorem ipsum dolor sit amet, vix ad euismod scriptorem. Quo prodesset dissentiet et, pri ea nostro utamur maiorum. Legendos comprehensam vis eu, no sed illum concludaturque. Eos eu reque saperet epicurei, sed ad nobis platonem iudicabit. Modus reformidans usu ei.
+                                </p>
+                            </div>
+
+                        </div>
+                        <hr>
+                        <div class="pure-g">
+                            <div class="pure-u-1-3">
+                                <a href="#"><img src="img/rcgears-small.png" alt="club picture" class="pure-img"></a>
+                            </div>
+                            <div class="pure-u-2-3">
+                                <h3 class="remove-spacing">Race Title</h3>
+                                <span class="event-text remove-spacing">July 29-30, 2015 - </span>
+                                <span class="event-text remove-spacing">Calgary, AB, CA</span>
+                                <p>
+                                    Lorem ipsum dolor sit amet, vix ad euismod scriptorem. Quo prodesset dissentiet et, pri ea nostro utamur maiorum. Legendos comprehensam vis eu, no sed illum concludaturque. Eos eu reque saperet epicurei, sed ad nobis platonem iudicabit. Modus reformidans usu ei.
+                                </p>
+                            </div>
+
+                        </div>
+                        <hr>
+                        <div class="pure-g">
+                            <div class="pure-u-1-3">
+                                <a href="#"><img src="img/rcgears-small.png" alt="club picture" class="pure-img"></a>
+                            </div>
+                            <div class="pure-u-2-3">
+                                <h3 class="remove-spacing">Race Title</h3>
+                                <span class="event-text remove-spacing">July 29-30, 2015 - </span>
+                                <span class="event-text remove-spacing">Calgary, AB, CA</span>
+                                <p>
+                                    Lorem ipsum dolor sit amet, vix ad euismod scriptorem. Quo prodesset dissentiet et, pri ea nostro utamur maiorum. Legendos comprehensam vis eu, no sed illum concludaturque. Eos eu reque saperet epicurei, sed ad nobis platonem iudicabit. Modus reformidans usu ei.
+                                </p>
+                            </div>
+
+                        </div>
+                        <hr>
+                        <div class="pure-g">
+                            <div class="pure-u-1-3">
+                                <a href="#"><img src="img/rcgears-small.png" alt="club picture" class="pure-img"></a>
+                            </div>
+                            <div class="pure-u-2-3">
+                                <h3 class="remove-spacing">Race Title</h3>
+                                <span class="event-text remove-spacing">July 29-30, 2015 - </span>
+                                <span class="event-text remove-spacing">Calgary, AB, CA</span>
+                                <p>
+                                    Lorem ipsum dolor sit amet, vix ad euismod scriptorem. Quo prodesset dissentiet et, pri ea nostro utamur maiorum. Legendos comprehensam vis eu, no sed illum concludaturque. Eos eu reque saperet epicurei, sed ad nobis platonem iudicabit. Modus reformidans usu ei.
+                                </p>
+                            </div>
+
+                        </div>
+                        <hr>
+                        <div class="pure-g">
+                            <div class="pure-u-1-3">
+                                <a href="#"><img src="img/rcgears-small.png" alt="club picture" class="pure-img"></a>
+                            </div>
+                            <div class="pure-u-2-3">
+                                <h3 class="remove-spacing">Race Title</h3>
+                                <span class="event-text remove-spacing">July 29-30, 2015 - </span>
+                                <span class="event-text remove-spacing">Calgary, AB, CA</span>
+                                <p>
+                                    Lorem ipsum dolor sit amet, vix ad euismod scriptorem. Quo prodesset dissentiet et, pri ea nostro utamur maiorum. Legendos comprehensam vis eu, no sed illum concludaturque. Eos eu reque saperet epicurei, sed ad nobis platonem iudicabit. Modus reformidans usu ei.
+                                </p>
+                            </div>
+
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+                <div class="pure-u-1 pure-u-sm-2-5 ">
+                    <div class=" box">
+                        <h2 class="remove-spacing">Track Development</h2>
+                        <hr class="dashed">
+
+                        <div>
+                            <h3 class="remove-spacing">Race Title</h3>
+                            <span class="event-text remove-spacing">July 29-30, 2015 - </span>
+                            <span class="event-text remove-spacing">Calgary, AB, CA</span>
+                            <p>
+                                Lorem ipsum dolor sit amet, vix ad euismod scriptorem. Quo prodesset dissentiet et, pri ea nostro utamur maiorum. Legendos comprehensam vis eu, no sed illum concludaturque. Eos eu reque saperet epicurei, sed ad nobis platonem iudicabit. Modus reformidans usu ei.
+                            </p>
+                        </div>
+                        <hr>
+                        <div>
+                            <h3 class="remove-spacing">Race Title</h3>
+                            <span class="event-text remove-spacing">July 29-30, 2015 - </span>
+                            <span class="event-text remove-spacing">Calgary, AB, CA</span>
+                            <p>
+                                Lorem ipsum dolor sit amet, vix ad euismod scriptorem. Quo prodesset dissentiet et, pri ea nostro utamur maiorum. Legendos comprehensam vis eu, no sed illum concludaturque. Eos eu reque saperet epicurei, sed ad nobis platonem iudicabit. Modus reformidans usu ei.
+                            </p>
+                        </div>
+                        <hr>
+                        <div>
+                            <h3 class="remove-spacing">Race Title</h3>
+                            <span class="event-text remove-spacing">July 29-30, 2015 - </span>
+                            <span class="event-text remove-spacing">Calgary, AB, CA</span>
+                            <p>
+                                Lorem ipsum dolor sit amet, vix ad euismod scriptorem. Quo prodesset dissentiet et, pri ea nostro utamur maiorum. Legendos comprehensam vis eu, no sed illum concludaturque. Eos eu reque saperet epicurei, sed ad nobis platonem iudicabit. Modus reformidans usu ei.
+                            </p>
+                        </div>
+                        <hr>
+                        <div>
+                            <h3 class="remove-spacing">Race Title</h3>
+                            <span class="event-text remove-spacing">July 29-30, 2015 - </span>
+                            <span class="event-text remove-spacing">Calgary, AB, CA</span>
+                            <p>
+                                Lorem ipsum dolor sit amet, vix ad euismod scriptorem. Quo prodesset dissentiet et, pri ea nostro utamur maiorum. Legendos comprehensam vis eu, no sed illum concludaturque. Eos eu reque saperet epicurei, sed ad nobis platonem iudicabit. Modus reformidans usu ei.
+                            </p>
+                        </div>
+                        <hr>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+    </div>
+    <div id="footer" class="black-background">
+        <div class="box">
+            &copy; Joker Lane Raceway All rights Reserved.
+            <div class="float-right">
+                {% include 'socialMedia.html' %}
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

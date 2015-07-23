@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+    {% for article in articles_page.object_list %}
+        {% if article.tags == true %}
+            {% for tag in article.tags %}
+                {% if tag.name != "race" %}
+                    {% include 'indexArticle.html' %}
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            {% include 'indexArticle.html' %}
+        {% endif %}
+    {% endfor %}
+
+    {% for article in articles_page.object_list %}
+        {% for tag in article.tags %}
+            {% if tag.name == "race" %}
+              {% include 'indexRace.html' %}
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+
+        {% if articles_page.has_other_pages() %}
+        {% include 'pagination.html' %}
+        {% endif %}
+{% endblock content %}
