@@ -280,6 +280,10 @@ a:hover {
     color: grey;
     transition: .5s;
 }
+p   {
+    margin: 0;
+    padding: 0;
+}
 @media only screen and (max-width: 48em) {
     #push-down  {
         margin: 0;

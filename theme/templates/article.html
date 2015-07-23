@@ -3,19 +3,18 @@
     {{ article.title }}
 {% endblock pageTitle %}
 {% block content %}
-<div class="pure-u-1 pure-u-sm-3-5">
-    <div class="box sidebar-right">
-        <div class="pure-g">
-            <div class="pure-u-1">
-                <span class="remove-spacing">{{ article.locale_date }}</span><span>{{ article.author.name }}</span>
-                <p>
-                    {{ article.summary }}
-                </p>
-                <a href="{{ article.url }}">Read more</a>
-            </div>
 
-        </div>
-        <hr>
+
+<div class="pure-u-1 pure-u-sm-3-5">
+    <div class="box-top">
+        {{ article.content }}
+    </div>
+</div>
+
+<div class="pure-u-1 pure-u-sm-2-5">
+    <div class="box-top">
+        <h3 class="remove-spacing">Author: {{ article.author.name }}</h3>
+        <div class="remove-spacing">Posted: {{ article.locale_date }}</div>
     </div>
 </div>
 {% endblock content %}
